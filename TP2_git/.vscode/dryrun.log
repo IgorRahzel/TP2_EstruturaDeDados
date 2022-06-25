@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/rahzel/Desktop/TP2'
+g++ -std=c++11 -g -Wall -c src/List.cpp -o obj/List.o -I./include/
+g++ -std=c++11 -g -Wall -c src/Node.cpp -o obj/Node.o -I./include/
+g++ -std=c++11 -g -Wall -c src/Word.cpp -o obj/Word.o -I./include/
+g++ -std=c++11 -g -Wall -c src/main.cpp -o obj/main.o -I./include/
+g++ -std=c++11 -g -Wall -o ./bin/tp2.out  ./obj/List.o  ./obj/Node.o  ./obj/Word.o  ./obj/main.o
+make: Leaving directory '/home/rahzel/Desktop/TP2'
+ 
