@@ -6,6 +6,7 @@ class Node{
     private:
         Word w;
         Node* next;
+        Node* prev;
     friend class List;
     public:
         Node();

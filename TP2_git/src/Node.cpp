@@ -2,4 +2,5 @@
 
 Node::Node(){
     next = NULL;
+    prev = NULL;
 }

@@ -50,7 +50,9 @@ void List::InsertLast(Word word){
     Node *nova;
     nova = new Node();
     nova->w = word;
+
     tail->next = nova;
+    nova->prev = tail;
     tail = nova;
     tamanho++;
 
