@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 09:15:11 2022
+# Make data base, printed on Sat Jun 25 10:56:16 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ca02fb41-b82e-41ea-9677-ea27ec52a750.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-146860c2-e4ad-4639-b783-91d2b7170a4c.sock
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
@@ -47,7 +47,6 @@ SNAP_INSTANCE_NAME = code
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
- 
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
@@ -80,7 +79,7 @@ CURDIR := /home/rahzel/Desktop/Projetos/TP2_EstruturaDeDados/TP2_git
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -108,7 +107,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 3455
+VSCODE_PID = 15267
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -230,7 +229,7 @@ MANAGERPID = 1675
 # environment
 LC_MEASUREMENT = pt_BR.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3402
+GIO_LAUNCHED_DESKTOP_FILE_PID = 15220
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -295,6 +294,7 @@ GDMSESSION = ubuntu
 LC_IDENTIFICATION = pt_BR.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+ 
 # variable set hash-table stats:
 # Load=142/1024=14%, Rehash=0, Collisions=8/191=4%
 
@@ -322,7 +322,7 @@ obj/%.o: src/%.cpp
 obj/main.o: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-24 19:23:30.57721
+#  Last modified 2022-06-25 10:46:17.061834967
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -331,8 +331,7 @@ obj/main.o: src/main.cpp
 obj/List.o: src/List.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'List'
- 
-#  Last modified 2022-06-24 19:18:40.82809
+#  Last modified 2022-06-25 10:51:15.02580313
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -341,7 +340,7 @@ obj/List.o: src/List.cpp
 # Not a target:
 src/List.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 19:16:54.251653
+#  Last modified 2022-06-25 10:50:58.533749609
 #  File has been updated.
 #  Successfully updated.
 
@@ -355,7 +354,7 @@ Makefile:
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 19:23:08.529128
+#  Last modified 2022-06-25 10:44:04.12855965
 #  File has been updated.
 #  Successfully updated.
 
@@ -369,7 +368,7 @@ clean:
 obj/Node.o: src/Node.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Node'
-#  Last modified 2022-06-24 19:23:56.141305
+#  Last modified 2022-06-25 09:42:20.727478825
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -425,7 +424,7 @@ src/Word.cpp:
 # Not a target:
 src/Node.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 19:23:50.221283
+#  Last modified 2022-06-25 09:42:12.314778217
 #  File has been updated.
 #  Successfully updated.
 
@@ -452,6 +451,6 @@ obj/Word.o: src/Word.cpp
 # strcache performance: lookups = 49 / hit rate = 30%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=0/49=0%
-# Finished Make data base on Sat Jun 25 09:15:11 2022
+# Finished Make data base on Sat Jun 25 10:56:16 2022
 
  

@@ -1,15 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include "List.h"
+#include "Sort.h"
 
 int main(int argc,char **argv){
 
     string s;
     string aux;
     string order;
-
+    int size;
     List list;
-    
     fstream file;
     file.open("entrada.txt",ios::in);
     
@@ -40,8 +40,24 @@ int main(int argc,char **argv){
         list.Search(s);
     }
     */
+    
+    size = list.GetSize();
+    Sort srt(size);
 
-    list.print();
+    for(int i = 0; i < size; i++){
+        
+        srt.SetWord(list.GetItem(i+1),i);
+    }
+
+    srt.QuickSort(size-1);
+
+     for(int i = 0; i < size; i++){
+        cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
+
+    }
+
+
+    
 
     
 

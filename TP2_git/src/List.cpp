@@ -14,6 +14,11 @@ List::~List(){
     delete head;
 }
 
+int List::GetSize(){
+
+    return tamanho;
+}
+
 Node* List::place(int pos, bool before = false){
     
     Node *p;
@@ -108,5 +113,52 @@ void List::print(){
         cout << p->w.getWord() << " " << p->w.getOccurrences() << endl;
         p = p->next;
     }
+
+}
+
+void List::Swap(Word* a, Word* b){
+
+    Word t  = *a;
+    *a = *b;
+    *b = t;
+}
+
+bool List::AllowSwap(){
+
+    return true;
+}
+
+Node* List::Partition(Node* f, Node* l){
+    
+    Word x = l->w;
+
+    Node *i = f->prev;
+
+    for (Node *j = f; j != l; j=j->next){
+       //comparar WORD aqui
+        if(j->w.getWord() <= x.getWord()){
+            
+            i = (i == NULL)? f : i->next;
+
+            Swap(&(i->w),&(j->w));
+
+        }
+    }
+    i = (i == NULL)? f : i->next;
+    Swap(&(i->w),&(l->w));
+    return i;
+}
+
+void List::_quickSort(Node* f,Node* l){
+    if(f!=l ){
+        Node *p = Partition(f,l);
+        _quickSort(f,p->prev);
+        _quickSort(p->next,l);
+    }
+}
+
+void List::quickSort(){
+
+    _quickSort(head->next,tail);
 
 }

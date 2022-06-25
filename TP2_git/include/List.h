@@ -13,6 +13,7 @@ class List{
     
         List();
         ~List();
+        int GetSize();
         Word GetItem(int pos);
         void SetItem(Word word, int pos);
         void SetOrder(string order);
@@ -22,9 +23,11 @@ class List{
         Word RemoveBeginning();
         Word RemoveLast();
         Word RemovePosition(int pos);
-        void Sort();
-        void AllowSwap();
-        void Partition(Node* i, Node* j);
+        void Swap (Word* a, Word*b);
+        bool AllowSwap();
+        Node* Partition(Node* n1,Node* n2);
+        void _quickSort(Node* n1, Node* n2);
+        void quickSort();
         void Search(string palavra);
         void print();
         void clear();
