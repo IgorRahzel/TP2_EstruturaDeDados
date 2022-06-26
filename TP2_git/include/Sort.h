@@ -18,6 +18,7 @@ class Sort{
         void sort(int Esq, int Dir);
         void QuickSort(int n);
         bool AllowSwap(string w1, string w2);
+        bool AllowSwap2(string w1, string w2);
 
 };
 

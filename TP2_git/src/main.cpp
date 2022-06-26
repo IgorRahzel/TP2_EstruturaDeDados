@@ -3,6 +3,17 @@
 #include "List.h"
 #include "Sort.h"
 
+string clearString(string input){
+    int p = input.length()-1;
+    if(input[p] == ',' || input[p] == '.' || input[p] == '!' || input[p] == '?' || input[p] == ':' ||
+       input[p] == ';' || input[p] == '_' ){
+
+        input.pop_back();
+    }
+
+    return input;
+}
+
 int main(int argc,char **argv){
 
     string s;
@@ -21,8 +32,10 @@ int main(int argc,char **argv){
             while(file >> s)
                 if(s.compare("#ORDEM")==0)
                     break;
-                else
+                else{
+                    s = clearString(s);
                     list.Search(s);
+                }
         }
         if(s.compare("#ORDEM")==0){
             for(int i = 0;i<26;i++){
@@ -50,6 +63,11 @@ int main(int argc,char **argv){
         
         srt.SetWord(list.GetItem(i+1),i);
     }
+
+    for(int c = 0; c<9;c++){
+        cout << srt.GetWord(c).getWord() << "|";
+    }
+    cout << endl;
 
     srt.QuickSort(size);
 
