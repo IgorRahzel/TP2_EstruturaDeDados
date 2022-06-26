@@ -29,7 +29,7 @@ int main(int argc,char **argv){
                 file >> aux;
                 order += aux;
             }
-            cout << order << endl;
+            //cout << order << endl;
         }
 
     }
@@ -43,13 +43,15 @@ int main(int argc,char **argv){
     
     size = list.GetSize();
     Sort srt(size);
+    srt.SetOrder(order);
+    srt.printOrder();
 
     for(int i = 0; i < size; i++){
         
         srt.SetWord(list.GetItem(i+1),i);
     }
 
-    srt.QuickSort(size-1);
+    srt.QuickSort(size);
 
      for(int i = 0; i < size; i++){
         cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
