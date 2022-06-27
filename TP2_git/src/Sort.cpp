@@ -46,7 +46,7 @@ do
     if (*i <= *j)
     {
     v = array[*i]; array[*i] = array[*j]; array[*j] = v;
-     for(int c = 0; c<9;c++){
+     for(int c = 0; c<11;c++){
         cout << array[c].getWord() << "|";
     }
     cout << endl;
@@ -84,6 +84,8 @@ bool Sort::AllowSwap(string w1, string w2){
     char a2[n2 +1];
     strcpy(a1, w1.c_str());
     strcpy(a2, w2.c_str());
+    bool contains = false;
+    string shortest;
 
     cout << "w1: ";
     for (long unsigned int i = 0; i < strlen(a1); i++)
@@ -100,10 +102,14 @@ bool Sort::AllowSwap(string w1, string w2){
 
     
 
-    if(w1.length() > w2.length())
+    if(w1.length() > w2.length()){
         min = w2.length();
-    else
+        shortest = w2;
+    }
+    else{
         min = w1.length();
+        shortest = w1;
+    }
 
     for (int i = 0; i < min; i++){
         
@@ -126,21 +132,32 @@ bool Sort::AllowSwap(string w1, string w2){
         if(index1 != index2){
             break;
         }
+        if(i == min-1 && index1==index2 && w1.compare(w2)!=0){
+            cout << "entrou no contains" << endl;
+            contains = true;
+        }
 
     }
-
-    if(index1 > index2){
-        cout << "true: " << index1 << " >= " << index2 << endl;
-        cout <<"################################" <<endl;
-        return true;
+    if(contains == false){
+        if(index1 > index2){
+            cout << "true: " << index1 << " >= " << index2 << endl;
+            cout <<"################################" <<endl;
+            return true;
+        }
+        else{
+            cout << "false: " << index1 << " < " << index2 << endl;
+            cout <<"################################" <<endl;
+            return false;  
+        }
     }
     else{
-        cout << "false: " << index1 << " < " << index2 << endl;
-        cout <<"################################" <<endl;
-        return false;
-        
+        if(shortest.compare(w2)==0)
+            return true;
+        else
+            return false;
+
     }
-    
+
 }
 
 
@@ -157,6 +174,8 @@ bool Sort::AllowSwap2(string w1, string w2){
     char a2[n2 +1];
     strcpy(a1, w1.c_str());
     strcpy(a2, w2.c_str());
+    bool contains = false;
+    string shortest;
 
     cout << "w1: ";
     for (long unsigned int i = 0; i < strlen(a1); i++)
@@ -172,11 +191,14 @@ bool Sort::AllowSwap2(string w1, string w2){
     
     cout << endl;
 
-    if(w1.length() > w2.length())
+    if(w1.length() > w2.length()){
         min = w2.length();
-    else
+        shortest = w2;
+    }
+    else{
         min = w1.length();
-
+        shortest = w1;
+    }
     for (int i = 0; i < min; i++){
         
         for (int j = 0; j < 26; j++){
@@ -199,18 +221,30 @@ bool Sort::AllowSwap2(string w1, string w2){
             break;
         }
 
-    }
+        if(i == min -1 && index1 == index2 && w1.compare(w2)!=0){
+            cout << "entrou no contains" << endl;
+            contains = true;
+        }
 
-    if(index1 < index2){
-        cout << "true: " << index1 << " < " << index2 << endl;
-        cout <<"################################" <<endl;
-        return true;
+    }
+    if(contains == false){
+        if(index1 < index2){
+            cout << "true: " << index1 << " < " << index2 << endl;
+            cout <<"################################" <<endl;
+            return true;
+        }
+        else{
+            cout << "false: " << index1 << " >= " << index2 << endl;
+            cout <<"################################" <<endl;
+            return false;
+            
+        }
     }
     else{
-        cout << "false: " << index1 << " >= " << index2 << endl;
-        cout <<"################################" <<endl;
-        return false;
-        
+        if(shortest.compare(w1)==0)
+            return true;
+        else
+            return false;
     }
     
 }

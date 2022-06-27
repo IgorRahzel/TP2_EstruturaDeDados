@@ -64,7 +64,7 @@ int main(int argc,char **argv){
         srt.SetWord(list.GetItem(i+1),i);
     }
 
-    for(int c = 0; c<9;c++){
+    for(int c = 0; c<11;c++){
         cout << srt.GetWord(c).getWord() << "|";
     }
     cout << endl;

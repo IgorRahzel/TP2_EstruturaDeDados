@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 10:56:16 2022
+# Make data base, printed on Mon Jun 27 12:46:52 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-146860c2-e4ad-4639-b783-91d2b7170a4c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e2bcfa5d-dd9b-46da-9dd2-3cb7b18cca98.sock
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
@@ -67,7 +67,7 @@ VSCODE_CODE_CACHE_PATH = /home/rahzel/.config/Code/CachedData/30d9c6cd9483b2cc58
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.QVFHO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.X4S6N1
 # default
 .LOADED := 
 # default
@@ -107,7 +107,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 15267
+VSCODE_PID = 27423
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -117,7 +117,7 @@ BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 30)
 OBJ_FOLDER = ./obj/
 # environment
-SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1822,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1822
+SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1820,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1820
 # automatic
 *F = $(notdir $*)
 # environment
@@ -169,7 +169,7 @@ SNAP = /snap/code/99
 # makefile (from 'Makefile', line 34)
 MAIN = Main
 # environment
-INVOCATION_ID = 18be630ad97d4d06b841287ad5ac34d3
+INVOCATION_ID = 064ba40cca9d465da60a04a56c9a5173
 # environment
 SNAP_REVISION = 99
 # environment
@@ -209,7 +209,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1872
+SYSTEMD_EXEC_PID = 1862
 # environment
 DISPLAY = :0
 # environment
@@ -225,11 +225,11 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = xU2Z8b6nNVON8WEnzpTU9_8J_mS1zz_nhVDrY0F-UNT5ImiIuk7F
 # environment
-MANAGERPID = 1675
+MANAGERPID = 1678
 # environment
 LC_MEASUREMENT = pt_BR.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 15220
+GIO_LAUNCHED_DESKTOP_FILE_PID = 27372
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -241,7 +241,7 @@ GDK_PIXBUF_MODULE_FILE = /home/rahzel/snap/code/common/.cache/gdk-pixbuf-loaders
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-JOURNAL_STREAM = 8:35020
+JOURNAL_STREAM = 8:30517
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -294,8 +294,8 @@ GDMSESSION = ubuntu
 LC_IDENTIFICATION = pt_BR.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
- 
 # variable set hash-table stats:
+ 
 # Load=142/1024=14%, Rehash=0, Collisions=8/191=4%
 
 # Pattern-specific Variable Values
@@ -304,11 +304,11 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# src (device 66309, inode 2624806): 6 files, no impossibilities.
+# src (device 66309, inode 2624806): 7 files, no impossibilities.
 # . (device 66309, inode 2624794): 9 files, no impossibilities.
-# ./src (device 66309, inode 2624806): 6 files, no impossibilities.
+# ./src (device 66309, inode 2624806): 7 files, no impossibilities.
 
-# 21 files, no impossibilities in 3 directories.
+# 23 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -322,7 +322,7 @@ obj/%.o: src/%.cpp
 obj/main.o: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-25 10:46:17.061834967
+#  Last modified 2022-06-27 12:28:46.880123355
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -331,7 +331,7 @@ obj/main.o: src/main.cpp
 obj/List.o: src/List.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'List'
-#  Last modified 2022-06-25 10:51:15.02580313
+#  Last modified 2022-06-25 11:36:58.108530809
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -340,7 +340,7 @@ obj/List.o: src/List.cpp
 # Not a target:
 src/List.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-25 10:50:58.533749609
+#  Last modified 2022-06-25 11:25:13.486282302
 #  File has been updated.
 #  Successfully updated.
 
@@ -354,7 +354,7 @@ Makefile:
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-25 10:44:04.12855965
+#  Last modified 2022-06-27 12:28:42.372325146
 #  File has been updated.
 #  Successfully updated.
 
@@ -380,7 +380,7 @@ obj/Node.o: src/Node.cpp
 #  Modification time never checked.
 #  File has not been updated.
 
-all: obj/List.o obj/Node.o obj/Word.o obj/main.o
+all: obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
@@ -394,13 +394,13 @@ all: obj/List.o obj/Node.o obj/Word.o obj/main.o
 # automatic
 # < := obj/List.o
 # automatic
-# + := obj/List.o obj/Node.o obj/Word.o obj/main.o
+# + := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
 # automatic
 # % := 
 # automatic
-# ^ := obj/List.o obj/Node.o obj/Word.o obj/main.o
+# ^ := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
 # automatic
-# ? := obj/List.o obj/Node.o obj/Word.o obj/main.o
+# ? := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
 # automatic
 # | := 
 # variable set hash-table stats:
@@ -412,6 +412,22 @@ all: obj/List.o obj/Node.o obj/Word.o obj/main.o
 src/Word.cpp:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-21 11:49:54.270791
+#  File has been updated.
+#  Successfully updated.
+
+obj/Sort.o: src/Sort.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Sort'
+#  Last modified 2022-06-27 12:27:37.784969249
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 40):
+	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
+
+# Not a target:
+src/Sort.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-27 12:27:21.091439937
 #  File has been updated.
 #  Successfully updated.
 
@@ -438,19 +454,19 @@ obj/Word.o: src/Word.cpp
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/41=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/47=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 34 / storage = 291 B / avg = 8 B
-# current buf: size = 8162 B / used = 291 B / count = 34 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 38 / storage = 329 B / avg = 8 B
+# current buf: size = 8162 B / used = 329 B / count = 38 / avg = 8 B
 
-# strcache performance: lookups = 49 / hit rate = 30%
+# strcache performance: lookups = 54 / hit rate = 29%
 # hash-table stats:
-# Load=34/8192=0%, Rehash=0, Collisions=0/49=0%
-# Finished Make data base on Sat Jun 25 10:56:16 2022
+# Load=38/8192=0%, Rehash=0, Collisions=0/54=0%
+# Finished Make data base on Mon Jun 27 12:46:52 2022
 
  
