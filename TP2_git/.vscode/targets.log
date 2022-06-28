@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 27 12:46:52 2022
+# Make data base, printed on Tue Jun 28 07:07:51 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e2bcfa5d-dd9b-46da-9dd2-3cb7b18cca98.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a7ef476d-4617-48c8-8fe0-82441c2cafd3.sock
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
@@ -67,7 +67,7 @@ VSCODE_CODE_CACHE_PATH = /home/rahzel/.config/Code/CachedData/30d9c6cd9483b2cc58
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.X4S6N1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.TIEHO1
 # default
 .LOADED := 
 # default
@@ -107,7 +107,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 27423
+VSCODE_PID = 5486
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -117,7 +117,7 @@ BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 30)
 OBJ_FOLDER = ./obj/
 # environment
-SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1820,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1820
+SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1734,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1734
 # automatic
 *F = $(notdir $*)
 # environment
@@ -169,7 +169,7 @@ SNAP = /snap/code/99
 # makefile (from 'Makefile', line 34)
 MAIN = Main
 # environment
-INVOCATION_ID = 064ba40cca9d465da60a04a56c9a5173
+INVOCATION_ID = 1b5ef58dbbf44ad596470b2919025c0f
 # environment
 SNAP_REVISION = 99
 # environment
@@ -209,7 +209,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1862
+SYSTEMD_EXEC_PID = 1780
 # environment
 DISPLAY = :0
 # environment
@@ -225,11 +225,11 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = xU2Z8b6nNVON8WEnzpTU9_8J_mS1zz_nhVDrY0F-UNT5ImiIuk7F
 # environment
-MANAGERPID = 1678
+MANAGERPID = 1592
 # environment
 LC_MEASUREMENT = pt_BR.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 27372
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3911
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -241,7 +241,7 @@ GDK_PIXBUF_MODULE_FILE = /home/rahzel/snap/code/common/.cache/gdk-pixbuf-loaders
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-JOURNAL_STREAM = 8:30517
+JOURNAL_STREAM = 8:34235
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -285,6 +285,7 @@ INCLUDE_FOLDER = ./include/
 # makefile (from 'Makefile', line 23)
 CC = g++
 # environment
+ 
 SNAP_USER_DATA = /home/rahzel/snap/code/99
 # environment
 XDG_MENU_PREFIX = gnome-
@@ -295,7 +296,6 @@ LC_IDENTIFICATION = pt_BR.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
- 
 # Load=142/1024=14%, Rehash=0, Collisions=8/191=4%
 
 # Pattern-specific Variable Values
@@ -467,6 +467,6 @@ obj/Word.o: src/Word.cpp
 # strcache performance: lookups = 54 / hit rate = 29%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=0/54=0%
-# Finished Make data base on Mon Jun 27 12:46:52 2022
+# Finished Make data base on Tue Jun 28 07:07:51 2022
 
  

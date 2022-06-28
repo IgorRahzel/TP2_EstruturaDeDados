@@ -34,41 +34,62 @@ void Sort::SetWord(Word p, int pos){
 
 }
 
-void Sort::Partition(int L, int R,int *i, int *j){
+void Sort::Insertion(int L,int R){
 
-Word x, v;
-*i = L; *j = R;
-x = array[(*i + *j)/2]; /* obtem o pivo x */
-do
-{
-    while (AllowSwap(x.getWord(),array[*i].getWord())) (*i)++;
-    while (AllowSwap2(x.getWord(),array[*j].getWord())) (*j)--;
-    if (*i <= *j)
-    {
-    v = array[*i]; array[*i] = array[*j]; array[*j] = v;
-     for(int c = 0; c<11;c++){
-        cout << array[c].getWord() << "|";
+    int i,j;
+    Word aux;
+    for (i = L; i < R; i++) {
+        aux = array[i];
+        j = i - 1;
+        while (( j >= 0 ) && (AllowSwap2(aux.getWord(),array[j].getWord()))) {
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = aux;
     }
-    cout << endl;
-    (*i)++; (*j)--;
-    }
-} while (*i <= *j);
-
 }
 
-void Sort::sort(int Esq, int Dir){
+void Sort::Partition(int L, int R,int *i, int *j){
+
+    Word x, v;
+    *i = L; *j = R;
+    
+    x = array[(*i + *j)/2]; /* obtem o pivo x */
+    do
+    {
+        while (AllowSwap(x.getWord(),array[*i].getWord())) (*i)++;
+        while (AllowSwap2(x.getWord(),array[*j].getWord())) (*j)--;
+        if (*i <= *j)
+        {
+        v = array[*i]; array[*i] = array[*j]; array[*j] = v;
+        for(int c = 0; c<11;c++){
+            cout << array[c].getWord() << "|";
+        }
+        cout << endl;
+        (*i)++; (*j)--;
+        }
+    } while (*i <= *j);
+    
+}
+
+void Sort::sort(int Esq, int Dir,int s){
 
     int i;
     int j;
+
+    if(Dir - Esq <= s){
+        Insertion(Esq,Dir);
+    }
+
     Partition(Esq, Dir, &i, &j);
-    if (Esq < j) sort(Esq, j);
-    if (i < Dir) sort(i, Dir);
+    if (Esq < j) sort(Esq, j,s);
+    if (i < Dir) sort(i, Dir,s);
 
 }
 
-void Sort::QuickSort(int n){
+void Sort::QuickSort(int n,int s){
 
-   sort(0, n-1);
+   sort(0, n-1,s);
 }
 
 bool Sort::AllowSwap(string w1, string w2){

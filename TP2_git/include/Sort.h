@@ -15,10 +15,11 @@ class Sort{
         void SetWord(Word p, int pos);
         Word GetWord(int pos);
         void Partition(int L, int R,int *i, int *j);
-        void sort(int Esq, int Dir);
-        void QuickSort(int n);
+        void sort(int Esq, int Dir,int s);
+        void QuickSort(int n,int s);
         bool AllowSwap(string w1, string w2);
         bool AllowSwap2(string w1, string w2);
+        void Insertion(int L,int R);//incompleto
 
 };
 

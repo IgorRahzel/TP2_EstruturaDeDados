@@ -9,6 +9,7 @@ class Word{
     private:
         string word;
         int occurrences;
+        int index;
     friend class List;
     
     public:
@@ -18,6 +19,8 @@ class Word{
         int getOccurrences();
         void AddOcurrences();
         bool WordMatches(string s);
+        void setIndex(int i);
+        int getindex();
 
 };
 

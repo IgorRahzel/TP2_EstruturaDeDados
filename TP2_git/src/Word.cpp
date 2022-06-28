@@ -21,6 +21,15 @@ void Word::AddOcurrences(){
     occurrences++;
 }
 
+void Word::setIndex(int i){
+
+    index = i;
+}
+
+int Word::getindex(){
+    return index;
+}
+
  bool Word::WordMatches(string s){
     for (auto i = 0; i < s.length(); i++){
         s[i] = tolower(s[i]);
