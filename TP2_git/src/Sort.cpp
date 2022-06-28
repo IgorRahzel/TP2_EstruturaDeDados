@@ -49,12 +49,38 @@ void Sort::Insertion(int L,int R){
     }
 }
 
-void Sort::Partition(int L, int R,int *i, int *j){
+void Sort::Insertion(Word *&median, int m) {
+    int i,j;
+    Word aux;
+    for (i = 1; i < m; i++) {
+    aux = median[i];
+    j = i - 1;
+    while (( j >= 0 ) && (AllowSwap2(aux.getWord(),median[j].getWord()))) {
+    median[j + 1] = median[j];
+    j--;
+    }
+    median[j + 1] = aux;
+    }
+}
+
+void Sort::Partition(int L, int R,int *i, int *j,int m){
 
     Word x, v;
     *i = L; *j = R;
     
-    x = array[(*i + *j)/2]; /* obtem o pivo x */
+    //Escolhendo pivô pela mediana
+    if(m > 0){
+        Word *median = new Word[m];
+        for(int c = 0; c < m; c++){
+            median[c] = array[c];
+        }
+        Insertion(median,m);
+        x = median[m/2];
+        delete []median;
+    }
+    else{
+        x = array[(*i + *j)/2]; /* obtem o pivo x */
+    }
     do
     {
         while (AllowSwap(x.getWord(),array[*i].getWord())) (*i)++;
@@ -72,24 +98,24 @@ void Sort::Partition(int L, int R,int *i, int *j){
     
 }
 
-void Sort::sort(int Esq, int Dir,int s){
+void Sort::sort(int Esq, int Dir,int s,int m){
 
     int i;
     int j;
 
-    if(Dir - Esq <= s){
+    if(Dir - Esq <= s && s>0){
         Insertion(Esq,Dir);
     }
-
-    Partition(Esq, Dir, &i, &j);
-    if (Esq < j) sort(Esq, j,s);
-    if (i < Dir) sort(i, Dir,s);
-
+    else{
+        Partition(Esq, Dir, &i, &j, m);
+        if (Esq < j) sort(Esq, j,s,m);
+        if (i < Dir) sort(i, Dir,s,m);
+    }
 }
 
-void Sort::QuickSort(int n,int s){
+void Sort::QuickSort(int n,int s = 0,int m = 0){
 
-   sort(0, n-1,s);
+   sort(0, n-1,s,m);
 }
 
 bool Sort::AllowSwap(string w1, string w2){

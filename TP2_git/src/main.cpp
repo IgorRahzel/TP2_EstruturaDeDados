@@ -69,17 +69,12 @@ int main(int argc,char **argv){
     }
     cout << endl;
 
-    srt.QuickSort(size,3);
+    srt.QuickSort(size,0,0);
 
      for(int i = 0; i < size; i++){
         cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
 
     }
-
-
-    
-
-    
 
     return 0;
 }

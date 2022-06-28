@@ -9,7 +9,6 @@ class Word{
     private:
         string word;
         int occurrences;
-        int index;
     friend class List;
     
     public:
