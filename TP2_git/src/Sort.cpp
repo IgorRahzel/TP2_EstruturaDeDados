@@ -138,8 +138,8 @@ void Sort::sort(int Esq, int Dir,int s,int m){
 
     int i;
     int j;
-
-    if((Dir - Esq + 1 <= s && s>0)){
+    int subArray_size = Dir - Esq + 1;
+    if((subArray_size <= s && s>1) || (subArray_size < m && subArray_size > s)){
         Insertion(Esq,Dir);
     }
     else{
@@ -156,7 +156,7 @@ void Sort::QuickSort(int n,int s = 0,int m = 0){
 
 bool Sort::AllowSwap(string w1, string w2){
     chamada ++;
-    cout << "(Allow1)chamada: " << chamada << endl;
+    cout << "(Allow1)chamada: " << chamada << endl <<endl;
 
     int min;
     int index1;
@@ -175,7 +175,7 @@ bool Sort::AllowSwap(string w1, string w2){
     {
         cout<< a1[i];
     }
-    cout << endl << endl;
+    cout << endl;
     cout << "w2: ";
     for (long unsigned int i = 0; i < strlen(a2); i++)
     {
@@ -246,7 +246,7 @@ bool Sort::AllowSwap(string w1, string w2){
 
 bool Sort::AllowSwap2(string w1, string w2){
     chamada ++;
-    cout << "(Allow2)chamada: " << chamada << endl;
+    cout << "(Allow2)chamada: " << chamada << endl << endl;
 
     int min;
     int index1;
@@ -265,7 +265,7 @@ bool Sort::AllowSwap2(string w1, string w2){
     {
         cout<< a1[i];
     }
-    cout << endl << endl;
+    cout << endl;
     cout << "w2: ";
     for (long unsigned int i = 0; i < strlen(a2); i++)
     {
