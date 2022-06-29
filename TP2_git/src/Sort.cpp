@@ -2,6 +2,7 @@
 #include <cstring>
 
 Sort::Sort(int size){
+    this->size = size -1;
     array = new Word[size];
     chamada = 0;
 }
@@ -38,7 +39,14 @@ void Sort::Insertion(int L,int R){
 
     int i,j;
     Word aux;
-    for (i = L; i < R; i++) {
+    cout << "entrou na inserção" <<endl;
+    cout << endl << endl << " -- SUBARRAY --" << endl << endl;
+    for(int c = L; c<=R ; c++){
+        cout << array[c].getWord() << "|";
+    }
+        cout << endl << endl;
+
+    for (i = L; i <= R; i++) {
         aux = array[i];
         j = i - 1;
         while (( j >= 0 ) && (AllowSwap2(aux.getWord(),array[j].getWord()))) {
@@ -49,10 +57,13 @@ void Sort::Insertion(int L,int R){
     }
 }
 
-void Sort::Insertion(Word *&median, int m) {
+void Sort::Insertion(Word *&median,int m,int L) {
+    
+
     int i,j;
     Word aux;
-    for (i = 1; i < m; i++) {
+
+    for (i = 0; i < m; i++) {
     aux = median[i];
     j = i - 1;
     while (( j >= 0 ) && (AllowSwap2(aux.getWord(),median[j].getWord()))) {
@@ -61,6 +72,12 @@ void Sort::Insertion(Word *&median, int m) {
     }
     median[j + 1] = aux;
     }
+    
+    cout << endl << endl;
+    for(int c = 0; c < m; c++){
+        cout << "Ordenados-median[" << c <<"]: " << median[c].getWord() << "|";
+    }
+    cout << endl << endl;
 }
 
 void Sort::Partition(int L, int R,int *i, int *j,int m){
@@ -69,26 +86,39 @@ void Sort::Partition(int L, int R,int *i, int *j,int m){
     *i = L; *j = R;
     
     //Escolhendo pivô pela mediana
-    if(m > 0){
+    if(m > 1){
+        cout << endl << endl << " -- FAZENDO MEDIANA -- " << endl << endl;
+
         Word *median = new Word[m];
-        for(int c = 0; c < m; c++){
-            median[c] = array[c];
+        for(int c = L; c < L+m; c++){
+            median[c-L] = array[c];
         }
-        Insertion(median,m);
-        x = median[m/2];
+        cout <<  endl << endl;
+        for(int c = 0; c < m; c++){
+            cout <<" median[" << c << "]: " << median[c].getWord() << "|";
+        }
+        cout << endl << endl;
+        Insertion(median,m,L);
+        int p = m/2;
+        x = median[p];
+        cout << "pivô: " << x.getWord() << endl;
         delete []median;
+       
     }
     else{
+        cout << endl << " -- NÃO FAZ MEDIANA -- " << endl << endl;
         x = array[(*i + *j)/2]; /* obtem o pivo x */
+        cout << "pivô: " << x.getWord() << endl;
     }
     do
     {
+        //cout << "pivô: " << x.getWord() << endl;
         while (AllowSwap(x.getWord(),array[*i].getWord())) (*i)++;
         while (AllowSwap2(x.getWord(),array[*j].getWord())) (*j)--;
         if (*i <= *j)
         {
         v = array[*i]; array[*i] = array[*j]; array[*j] = v;
-        for(int c = 0; c<11;c++){
+        for(int c = 0; c<size+1;c++){
             cout << array[c].getWord() << "|";
         }
         cout << endl;
@@ -97,13 +127,19 @@ void Sort::Partition(int L, int R,int *i, int *j,int m){
     } while (*i <= *j);
     
 }
+// Tamanho do subvetor <= s || tamanho do subvetor <= m
 
+// chama inserção
+
+// Senao
+
+// chama quicksort
 void Sort::sort(int Esq, int Dir,int s,int m){
 
     int i;
     int j;
 
-    if(Dir - Esq <= s && s>0){
+    if((Dir - Esq + 1 <= s && s>0)){
         Insertion(Esq,Dir);
     }
     else{

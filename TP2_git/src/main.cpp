@@ -59,17 +59,19 @@ int main(int argc,char **argv){
     srt.SetOrder(order);
     srt.printOrder();
 
+    cout << endl;
+
     for(int i = 0; i < size; i++){
         
         srt.SetWord(list.GetItem(i+1),i);
     }
 
-    for(int c = 0; c<11;c++){
+    for(int c = 0; c<size;c++){
         cout << srt.GetWord(c).getWord() << "|";
     }
     cout << endl;
 
-    srt.QuickSort(size,0,0);
+    srt.QuickSort(size,4,3);
 
      for(int i = 0; i < size; i++){
         cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;

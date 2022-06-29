@@ -7,6 +7,7 @@ class Sort{
         Word* array;
         char order[27];
         int chamada;
+        int size;
     public:
         Sort();
         Sort(int size);
@@ -19,8 +20,8 @@ class Sort{
         void QuickSort(int n,int s,int m);
         bool AllowSwap(string w1, string w2);
         bool AllowSwap2(string w1, string w2);
-        void Insertion(int L,int R);//incompleto
-        void Insertion(Word *&median, int m);
+        void Insertion(int L,int R);
+        void Insertion(Word *&median, int m, int L);
 
 };
 
