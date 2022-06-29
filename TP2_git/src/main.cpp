@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <getopt.h>
 #include "List.h"
 #include "Sort.h"
 
@@ -16,28 +17,45 @@ string clearString(string input){
 
 int main(int argc,char **argv){
 
-    string s;
+    string input;
     string aux;
     string order;
     int size;
+    int m;
+    int s;
     List list;
     fstream file;
     file.open("entrada.txt",ios::in);
-    
+
+    int option_val;
+
+    while((option_val = getopt(argc,argv,"s:m:"))!= -1){
+        switch (option_val)
+        {
+        case 's':
+            s = atoi(optarg);
+            break;
+        case 'm':
+            m = atoi(optarg);
+        default:
+            break;
+        }
+    }
+
     
     if (file.is_open()){
         
-        file >> s;
-        if(s.compare("#TEXTO")==0){
-            while(file >> s)
-                if(s.compare("#ORDEM")==0)
+        file >> input;
+        if(input.compare("#TEXTO")==0){
+            while(file >> input)
+                if(input.compare("#ORDEM")==0)
                     break;
                 else{
-                    s = clearString(s);
-                    list.Search(s);
+                    input = clearString(input);
+                    list.Search(input);
                 }
         }
-        if(s.compare("#ORDEM")==0){
+        if(input.compare("#ORDEM")==0){
             for(int i = 0;i<26;i++){
                 file >> aux;
                 order += aux;
@@ -70,13 +88,15 @@ int main(int argc,char **argv){
         cout << srt.GetWord(c).getWord() << "|";
     }
     cout << endl;
-
-    srt.QuickSort(size,4,3);
+    cout << "s: " << s << " m: " << m << endl;
+    
+    srt.QuickSort(size,s,m);
 
      for(int i = 0; i < size; i++){
         cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
 
     }
+    
 
     return 0;
 }
