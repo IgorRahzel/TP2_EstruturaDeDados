@@ -29,7 +29,7 @@ int main(int argc,char **argv){
 
     int option_val;
 
-    while((option_val = getopt(argc,argv,"I:i:S:s:M:m:O:O:"))!= -1){
+    while((option_val = getopt(argc,argv,"I:i:S:s:M:m:O:o:"))!= -1){
         switch (option_val)
         {
         case 'I':
@@ -80,9 +80,13 @@ int main(int argc,char **argv){
             }
         }
         else if(input.compare("#ORDEM") == 0){
-            while(aux.compare("#TEXTO") != 0){
-                file >> aux;
-                order += aux;
+            while(file >> aux){
+                if(aux.compare("#TEXTO") == 0){
+                    break;
+                }
+                else{
+                    order += aux;
+                }
             }
             while(file >> input){
                 input = clearString(input);
@@ -90,33 +94,8 @@ int main(int argc,char **argv){
             }
         
         }
-        /*
-        if(input.compare("#TEXTO")==0){
-            while(file >> input)
-                if(input.compare("#ORDEM")==0)
-                    break;
-                else{
-                    input = clearString(input);
-                    list.Search(input);
-                }
-        }
-        if(input.compare("#ORDEM")==0){
-            for(int i = 0;i<26;i++){
-                file >> aux;
-                order += aux;
-            }
-            //cout << order << endl;
-        }
-        */
-
     }
-    
-
-    /*
-    while(cin>>s){
-        list.Search(s);
-    }
-    */
+    file.close();
     
     size = list.GetSize();
     Sort srt(size);
@@ -134,7 +113,7 @@ int main(int argc,char **argv){
         cout << srt.GetWord(c).getWord() << "|";
     }
     cout << endl;
-    cout << "s: " << s << " m: " << m << endl;
+    cout << "s: " << s << " m: " << m <<" output_file: " << output_file  << endl;
     
     srt.QuickSort(size,s,m);
 
@@ -143,6 +122,12 @@ int main(int argc,char **argv){
 
     }
     
+    file.open(output_file,ios::out);
+    if(file.is_open()){
+        for(int i = 0; i < size; i++){
+            file << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
+        }
+    }
 
     return 0;
 }
