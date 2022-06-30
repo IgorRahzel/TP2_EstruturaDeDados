@@ -16,7 +16,8 @@ string clearString(string input){
 }
 
 int main(int argc,char **argv){
-
+    string input_file;
+    string output_file;
     string input;
     string aux;
     string order;
@@ -25,27 +26,71 @@ int main(int argc,char **argv){
     int s;
     List list;
     fstream file;
-    file.open("entrada.txt",ios::in);
 
     int option_val;
 
-    while((option_val = getopt(argc,argv,"s:m:"))!= -1){
+    while((option_val = getopt(argc,argv,"I:i:S:s:M:m:O:O:"))!= -1){
         switch (option_val)
         {
+        case 'I':
+            input_file = optarg;
+            break;
+        case 'i':
+            input_file = optarg;
+            break;
+        case 'S':
+            s = atoi(optarg);
+            break;
         case 's':
             s = atoi(optarg);
             break;
+        case 'M':
+            m = atoi(optarg);
         case 'm':
             m = atoi(optarg);
+        case 'O':
+            output_file = optarg;
+            break;
+        case 'o':
+            output_file = optarg;
+            break;
         default:
             break;
         }
     }
 
+    file.open(input_file,ios::in);
     
     if (file.is_open()){
         
         file >> input;
+        
+        if(input.compare("#TEXTO") == 0){
+            while(file >> input){  
+                if(input.compare("#ORDEM") == 0)
+                    break;
+                else{
+                    input = clearString(input);
+                    list.Search(input);
+                }
+            }
+            for(int i = 0; i < 26; i++){
+                file >> aux;
+                order += aux;
+            }
+        }
+        else if(input.compare("#ORDEM") == 0){
+            while(aux.compare("#TEXTO") != 0){
+                file >> aux;
+                order += aux;
+            }
+            while(file >> input){
+                input = clearString(input);
+                list.Search(input); 
+            }
+        
+        }
+        /*
         if(input.compare("#TEXTO")==0){
             while(file >> input)
                 if(input.compare("#ORDEM")==0)
@@ -62,6 +107,7 @@ int main(int argc,char **argv){
             }
             //cout << order << endl;
         }
+        */
 
     }
     

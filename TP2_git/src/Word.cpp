@@ -22,7 +22,7 @@ void Word::AddOcurrences(){
 }
 
  bool Word::WordMatches(string s){
-    for (auto i = 0; i < s.length(); i++){
+    for (long unsigned int i = 0; i < s.length(); i++){
         s[i] = tolower(s[i]);
     }
         if(word.compare(s)==0){

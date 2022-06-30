@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun 29 07:30:42 2022
+# Make data base, printed on Thu Jun 30 08:26:32 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b94fede4-f893-4acd-9e34-adee78358ed1.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1251128f-7a6a-4d58-bc24-82d8c7cae96e.sock
 # environment
 LC_NAME = pt_BR.UTF-8
 # environment
@@ -67,7 +67,7 @@ VSCODE_CODE_CACHE_PATH = /home/rahzel/.config/Code/CachedData/30d9c6cd9483b2cc58
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.749GO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.8NHIO1
 # default
 .LOADED := 
 # default
@@ -107,7 +107,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 8886
+VSCODE_PID = 2949
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -117,7 +117,7 @@ BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 30)
 OBJ_FOLDER = ./obj/
 # environment
-SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1844,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1844
+SESSION_MANAGER = local/rahzel-ThinkPad-L13-Gen-1:@/tmp/.ICE-unix/1753,unix/rahzel-ThinkPad-L13-Gen-1:/tmp/.ICE-unix/1753
 # automatic
 *F = $(notdir $*)
 # environment
@@ -169,7 +169,7 @@ SNAP = /snap/code/99
 # makefile (from 'Makefile', line 34)
 MAIN = Main
 # environment
-INVOCATION_ID = 612889a576734267b15b83ae6b007096
+INVOCATION_ID = 4d8be26afced48e6b6ae06d8b7c5165c
 # environment
 SNAP_REVISION = 99
 # environment
@@ -209,7 +209,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1891
+SYSTEMD_EXEC_PID = 1800
 # environment
 DISPLAY = :0
 # environment
@@ -225,11 +225,11 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = xU2Z8b6nNVON8WEnzpTU9_8J_mS1zz_nhVDrY0F-UNT5ImiIuk7F
 # environment
-MANAGERPID = 1700
+MANAGERPID = 1611
 # environment
 LC_MEASUREMENT = pt_BR.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 8836
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2781
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -241,7 +241,7 @@ GDK_PIXBUF_MODULE_FILE = /home/rahzel/snap/code/common/.cache/gdk-pixbuf-loaders
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-JOURNAL_STREAM = 8:35054
+JOURNAL_STREAM = 8:32198
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -278,13 +278,13 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 SNAP_COMMON = /var/snap/code/common
 # makefile (from 'Makefile', line 24)
 CXXFLAGS = -std=c++11 -g -Wall
+ 
 # makefile (from 'Makefile', line 28)
 INCLUDE_FOLDER = ./include/
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # makefile (from 'Makefile', line 23)
 CC = g++
- 
 # environment
 SNAP_USER_DATA = /home/rahzel/snap/code/99
 # environment
@@ -296,7 +296,7 @@ LC_IDENTIFICATION = pt_BR.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=142/1024=14%, Rehash=0, Collisions=8/191=4%
+# Load=142/1024=14%, Rehash=0, Collisions=7/185=4%
 
 # Pattern-specific Variable Values
 
@@ -322,16 +322,34 @@ obj/%.o: src/%.cpp
 obj/main.o: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-06-28 19:13:16.958470998
+#  Last modified 2022-06-29 18:50:32.740203105
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/main.o
+# automatic
+# * := main
+# automatic
+# < := src/main.cpp
+# automatic
+# + := src/main.cpp
+# automatic
+# % := 
+# automatic
+# ^ := src/main.cpp
+# automatic
+# ? := src/main.cpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
 #  recipe to execute (from 'Makefile', line 40):
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 obj/List.o: src/List.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'List'
-#  Last modified 2022-06-25 11:36:58.108530809
+#  Last modified 2022-06-29 17:31:54.019383478
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -354,7 +372,7 @@ Makefile:
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 19:13:08.594480636
+#  Last modified 2022-06-29 18:51:49.177807974
 #  File has been updated.
 #  Successfully updated.
 
@@ -368,7 +386,7 @@ clean:
 obj/Node.o: src/Node.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Node'
-#  Last modified 2022-06-25 09:42:20.727478825
+#  Last modified 2022-06-29 17:31:54.451474862
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -383,42 +401,25 @@ obj/Node.o: src/Node.cpp
 all: obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := all
-# automatic
-# * := 
-# automatic
-# < := obj/List.o
-# automatic
-# + := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
-# automatic
-# % := 
-# automatic
-# ^ := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
-# automatic
-# ? := obj/List.o obj/Node.o obj/Sort.o obj/Word.o obj/main.o
-# automatic
-# | := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/20=10%
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'Makefile', line 43):
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
 
 # Not a target:
 src/Word.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 08:47:10.612625307
+#  Last modified 2022-06-29 17:32:24.849253582
 #  File has been updated.
 #  Successfully updated.
 
 obj/Sort.o: src/Sort.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Sort'
-#  Last modified 2022-06-28 19:11:49.982591055
+#  Last modified 2022-06-29 17:31:54.699527323
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
@@ -427,15 +428,9 @@ obj/Sort.o: src/Sort.cpp
 # Not a target:
 src/Sort.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 19:11:35.770615104
+#  Last modified 2022-06-29 13:59:28.236495986
 #  File has been updated.
 #  Successfully updated.
-
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 src/Node.cpp:
@@ -447,14 +442,14 @@ src/Node.cpp:
 obj/Word.o: src/Word.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Word'
-#  Last modified 2022-06-28 08:55:27.423137741
+#  Last modified 2022-06-29 17:32:34.582855241
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 40):
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/47=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/46=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -464,9 +459,9 @@ obj/Word.o: src/Word.cpp
 # strcache buffers: 1 (0) / strings = 38 / storage = 329 B / avg = 8 B
 # current buf: size = 8162 B / used = 329 B / count = 38 / avg = 8 B
 
-# strcache performance: lookups = 54 / hit rate = 29%
+# strcache performance: lookups = 53 / hit rate = 28%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=0/54=0%
-# Finished Make data base on Wed Jun 29 07:30:42 2022
+# Load=38/8192=0%, Rehash=0, Collisions=0/53=0%
+# Finished Make data base on Thu Jun 30 08:26:32 2022
 
  
