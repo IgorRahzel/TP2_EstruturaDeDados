@@ -6,10 +6,11 @@
 
 string clearString(string input){
     int p = input.length()-1;
-    if(input[p] == ',' || input[p] == '.' || input[p] == '!' || input[p] == '?' || input[p] == ':' ||
-       input[p] == ';' || input[p] == '_' ){
+    while((input[p] == ',') || (input[p] == '.') || (input[p] == '!') || (input[p] == '?') || (input[p] == ':') ||
+       (input[p] == ';') || (input[p] == '_' )){
 
         input.pop_back();
+        p = input.length()-1;
     }
 
     return input;
@@ -127,6 +128,7 @@ int main(int argc,char **argv){
         for(int i = 0; i < size; i++){
             file << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
         }
+        file << "#FIM" << endl;
     }
 
     return 0;
