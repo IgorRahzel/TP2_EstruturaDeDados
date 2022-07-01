@@ -168,6 +168,8 @@ bool Sort::AllowSwap(string w1, string w2){
     strcpy(a1, w1.c_str());
     strcpy(a2, w2.c_str());
     bool contains = false;
+    bool found1;
+    bool found2;
     string shortest;
 
     cout << "w1: ";
@@ -195,20 +197,40 @@ bool Sort::AllowSwap(string w1, string w2){
     }
 
     for (int i = 0; i < min; i++){
+        found1 = false;
+        found2 = false;
         
         for (int j = 0; j < 26; j++){
             if(a1[i] == order[j]){
                 index1 = j;
+                found1 = true;
                 cout << "index1: " << index1 << " " << order[j] << endl;
                 break;
             }
-        }
-
-        for (int j = 0; j < 26; j++){
-            if(a2[i] == order[j]){
-                index2 = j;
-                cout << "index2: " << index2 << " " << order[j] << endl;
+            else if(found1 == false && j == 25){
+                index1 = a1[i];
+                index2 = a2[i];
+                cout << " USANDO -> ASCII " << endl;
+                cout << "index1: " << index1 << " " << a1[i] << endl;
+                cout << "index2: " << index2 << " " << a2[i] << endl;
                 break;
+            }
+        }
+        if(found1 == true){
+            for (int j = 0; j < 26; j++){
+                if(a2[i] == order[j]){
+                    index2 = j;
+                    cout << "index2: " << index2 << " " << order[j] << endl;
+                    break;
+                }
+                else if((found2 == false && j == 25)){
+                    index2 = a2[i];
+                    index1 = a1[i];
+                    cout << " USANDO -> ASCII " << endl;
+                    cout << "index1: " << index1 << " " << a1[i] << endl;
+                    cout << "index2: " << index2 << " " << a2[i] << endl;
+                    break;
+                }
             }
         }
         
@@ -258,6 +280,8 @@ bool Sort::AllowSwap2(string w1, string w2){
     strcpy(a1, w1.c_str());
     strcpy(a2, w2.c_str());
     bool contains = false;
+    bool found1;
+    bool found2;
     string shortest;
 
     cout << "w1: ";
@@ -282,24 +306,47 @@ bool Sort::AllowSwap2(string w1, string w2){
         min = w1.length();
         shortest = w1;
     }
+
     for (int i = 0; i < min; i++){
-        
+        found1 = false;
+        found2 = false;
+
         for (int j = 0; j < 26; j++){
             if(a1[i] == order[j]){
                 index1 = j;
+                found1 = true;
                 cout << "index1: " << index1 << " " << order[j] << endl;
                 break;
             }
+            else if(found1 == false && j == 25){
+                    index1 = a1[i];
+                    index2 = a2[i];
+                    cout << " USANDO -> ASCII " << endl;
+                    cout << "index1: " << index1 << " " << a1[i] << endl;
+                    cout << "index2: " << index2 << " " << a2[i] << endl;
+                    break;
+                }
+           
         }
-
-        for (int j = 0; j < 26; j++){
-            if(a2[i] == order[j]){
-                index2 = j;
-                cout << "index2: " << index2 << " " << order[j] << endl;
-                break;
+        if(found1==true){
+            for (int j = 0; j < 26; j++){
+                if(a2[i] == order[j]){
+                    index2 = j;
+                    found2 = true;
+                    cout << "index2: " << index2 << " " << order[j] << endl;
+                    break;
+                }
+                else if((found2 == false && j == 25)){
+                    index2 = a2[i];
+                    index1 = a1[i];
+                    cout << " USANDO -> ASCII " << endl;
+                    cout << "index1: " << index1 << " " << a1[i] << endl;
+                    cout << "index2: " << index2 << " " << a2[i] << endl;
+                    break;
+                }
+                
             }
         }
-        
         if(index1 != index2){
             break;
         }
