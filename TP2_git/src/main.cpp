@@ -101,27 +101,13 @@ int main(int argc,char **argv){
     size = list.GetSize();
     Sort srt(size);
     srt.SetOrder(order);
-    srt.printOrder();
-
-    cout << endl;
 
     for(int i = 0; i < size; i++){
         
         srt.SetWord(list.GetItem(i+1),i);
     }
-
-    for(int c = 0; c<size;c++){
-        cout << srt.GetWord(c).getWord() << "|";
-    }
-    cout << endl;
-    cout << "s: " << s << " m: " << m <<" output_file: " << output_file  << endl;
     
     srt.QuickSort(size,s,m);
-
-     for(int i = 0; i < size; i++){
-        cout << srt.GetWord(i).getWord() <<  " " << srt.GetWord(i).getOccurrences() << endl;
-
-    }
     
     file.open(output_file,ios::out);
     if(file.is_open()){

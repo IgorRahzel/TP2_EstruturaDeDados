@@ -18,8 +18,6 @@ class Word{
         int getOccurrences();
         void AddOcurrences();
         bool WordMatches(string s);
-        void setIndex(int i);
-        int getindex();
 
 };
 
