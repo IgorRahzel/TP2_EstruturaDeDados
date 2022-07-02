@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------
+// Arquivo      : List.h
+// Conteudo     : cabeçalho da classe List
+// Autor        : Igor Rahzel Colares Galdino (igorrahzel@ufmg.br)
+//---------------------------------------------------------------------
+
 #ifndef LIST_H
 #define LIST_H
 #include "Node.h"
@@ -18,7 +24,6 @@ class List{
         void SetOrder(string order);
         void InsertLast(Word palavra);
         void Search(string palavra);
-        void print();
 };
 
 

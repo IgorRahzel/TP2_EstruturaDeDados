@@ -4,6 +4,7 @@ g++ -std=c++11 -g -Wall -c src/List.cpp -o obj/List.o -I./include/
 g++ -std=c++11 -g -Wall -c src/Node.cpp -o obj/Node.o -I./include/
 g++ -std=c++11 -g -Wall -c src/Sort.cpp -o obj/Sort.o -I./include/
 g++ -std=c++11 -g -Wall -c src/Word.cpp -o obj/Word.o -I./include/
+ 
 g++ -std=c++11 -g -Wall -c src/main.cpp -o obj/main.o -I./include/
 g++ -std=c++11 -g -Wall -o ./bin/tp2.out  ./obj/List.o  ./obj/Node.o  ./obj/Sort.o  ./obj/Word.o  ./obj/main.o
 make: Leaving directory '/home/rahzel/Desktop/Projetos/TP2_EstruturaDeDados/TP2_git'

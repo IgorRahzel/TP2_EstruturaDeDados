@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------
+// Arquivo      : Word.h
+// Conteudo     : cabeçalho da classe Word
+// Autor        : Igor Rahzel Colares Galdino (igorrahzel@ufmg.br)
+//---------------------------------------------------------------------
+
 #ifndef WORD_H
 #define WORD_H
 #include <iostream>

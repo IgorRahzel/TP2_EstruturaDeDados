@@ -1,3 +1,8 @@
+//---------------------------------------------------------------------
+// Arquivo      : Word.cpp
+// Conteudo     : implementacao da classe Word
+// Autor        : Igor Rahzel Colares Galdino (igorrahzel@ufmg.br)
+//---------------------------------------------------------------------
 #include "Word.h"
 
 Word::Word(){
@@ -21,7 +26,9 @@ void Word::AddOcurrences(){
     occurrences++;
 }
 
- bool Word::WordMatches(string s){
+/*Identifica se duas
+palavras são iguais*/
+bool Word::WordMatches(string s){
     for (long unsigned int i = 0; i < s.length(); i++){
         s[i] = tolower(s[i]);
     }
@@ -31,5 +38,5 @@ void Word::AddOcurrences(){
         else
             return false;
 
- }
+}
 

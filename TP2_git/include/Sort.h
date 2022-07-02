@@ -1,3 +1,10 @@
+//---------------------------------------------------------------------
+// Arquivo      : Sort.h
+// Conteudo     : cabeçalho da classe Sort
+// Autor        : Igor Rahzel Colares Galdino (igorrahzel@ufmg.br)
+//---------------------------------------------------------------------
+
+
 #ifndef SORT_H
 #define SORT_H
 #include "Word.h"
@@ -20,7 +27,7 @@ class Sort{
         bool AllowSwap(string w1, string w2);
         bool AllowSwap2(string w1, string w2);
         void Insertion(int L,int R);
-        void Insertion(Word *&median, int m, int L);
+        void Insertion(Word *&median, int m);
 
 };
 
